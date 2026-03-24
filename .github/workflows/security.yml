@@ -1,0 +1,13 @@
+name: Security
+
+on:
+  pull_request:
+
+jobs:
+  gitleaks:
+    uses: tektomejp/security/.github/workflows/scan-gitleaks.yml@main
+    secrets: inherit
+
+  semgrep:
+    uses: tektomejp/security/.github/workflows/scan-semgrep.yml@main
+    secrets: inherit
